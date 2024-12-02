@@ -30,8 +30,8 @@ source $ZSH/oh-my-zsh.sh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Load Kubernetes shortcuts file
-if [ -f "$HOME/.config/aliases.sh" ]; then
-  source "$HOME/.config/aliases.sh"
+if [ -f "$HOME/.config/scripts/aliases.sh" ]; then
+  source "$HOME/.config/scripts/aliases.sh"
 else
   echo "Could not load Kubernetes aliases: file not found at $HOME/.config/aliases.sh"
 fi
@@ -41,6 +41,11 @@ if [ -f '/Users/mischagideonse/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/mischagideonse/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mischagideonse/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Method to remove local branches that have been merged on the remote
+function clean-git-branches() {
+  ~/.config/scripts/clean-branches.sh
+}
 
 # Method to switch between OpenJDK versions
 function openjdk() {
