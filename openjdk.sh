@@ -12,6 +12,10 @@ function openjdk() {
     echo "Switched to OpenJDK $1"
   else
     echo "OpenJDK $1 is not installed. Available versions:"
-    ls -1 /opt/homebrew/opt | grep openjdk@
+    for dir in /opt/homebrew/opt/openjdk@*; do
+      if [ -d "$dir" ]; then
+        basename "$dir"
+      fi
+    done
   fi
 }

@@ -47,5 +47,8 @@ function clean-git-branches() {
   ~/.config/scripts/clean-branches.sh
 }
 
-# Source the new openjdk.sh script file
+# Source a script to switch between OpenJDK versions
 source ~/.config/scripts/openjdk.sh
+
+# Allow using `docker` as an alias for `podman`
+alias docker=podman
