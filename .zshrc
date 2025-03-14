@@ -36,6 +36,13 @@ else
   echo "Could not load Kubernetes aliases: file not found at $HOME/.config/aliases.sh"
 fi
 
+# Source a script to switch to a local Kubernetes context
+if [ -f "$HOME/.config/scripts/kube-login-local.sh" ]; then
+  source "$HOME/.config/scripts/kube-login-local.sh"
+else
+  echo "Could not load Kubernetes local login script: file not found at $HOME/.config/scripts/kube-login-local.sh"
+fi
+
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/mischagideonse/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mischagideonse/google-cloud-sdk/completion.zsh.inc'; fi
 

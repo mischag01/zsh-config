@@ -8,3 +8,6 @@ cp ./.zshrc ~/.zshrc
 
 # Write the ./openjdk.sh file to the right location
 cp ./openjdk.sh ~/.config/scripts/openjdk.sh
+
+# Write the ./kube-login-local.sh file to the right location
+cp ./kube-login-local.sh ~/.config/scripts/kube-login-local.sh
